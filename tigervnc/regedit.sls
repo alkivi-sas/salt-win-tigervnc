@@ -6,7 +6,6 @@ password-registry:
     - vname: Password
     - vdata: !!binary {{ salt['vnc.hash_password'](tigervnc.password, True) }}
     - vtype: REG_BINARY
-    - reflection: True
 
 localhost-registry:
   reg.present:
@@ -14,7 +13,6 @@ localhost-registry:
     - vname: LocalHost
     - vdata: 1
     - vtype: REG_DWORD
-    - reflection: True
 
 portnumber-registry:
   reg.present:
@@ -22,5 +20,3 @@ portnumber-registry:
     - vname: PortNumber
     - vdata: 5900
     - vtype: REG_DWORD
-    - reflection: True
-
