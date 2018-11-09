@@ -12,6 +12,7 @@ tigervnc-download:
     - source: {{ tigervnc.url }}
     - source_hash: sha256={{ tigervnc.hash }}
     - makedirs: True
+    - show_changes: False
     - unless: powershell -noprofile -executionpolicy bypass -command c:\alkivi\packages\tigervnc\test_tigervnc.ps1
 
 tigervnc-install:
